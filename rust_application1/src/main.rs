@@ -1,12 +1,12 @@
-use std::{i8,i16,i32,i64,u8,u16,u32,u64,isize,usize,f32,f64};
-use std::io::stdin;
+use std::{i8,i32,f32};
+use std::io;
 
 fn main()
 {
     println!("------------------");
     println!("HAIL TORVALDS!");
     let num=10;
-    let mut age: i32=60;
+    let  age: i32=60;
     let hate: bool=age>num;
 
     println!("Num is {}",num);
@@ -15,4 +15,13 @@ fn main()
     println!("Am i hate? {}",hate);
     println!("sqrt(60)= {}", (age as f32) .sqrt( ));
     println!("------------------");
+    loop
+    {
+        println!("Guess the number!");
+        println!("Please input your guess.");
+        let mut guess = String::new();
+        io::stdin().read_line(&mut guess).expect("Failed to read line");
+        println!("You guessed: {}", guess);
+    }
 }
+
