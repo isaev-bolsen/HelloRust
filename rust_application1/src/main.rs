@@ -47,11 +47,11 @@ fn read_int() -> u32
        println!("Please input your guess.");
         let mut input = String::new();
         io::stdin().read_line(&mut input).expect("Failed to read line");
-        let guess: u32 = match input.trim().parse() {
-            Ok(num) => num,
+        
+        match input.trim().parse() {
+            Ok(num) => return num,
             Err(_) => continue,
         };
-        return  guess;
     }
 }
 
