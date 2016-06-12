@@ -26,7 +26,12 @@
     <Code Include="src\main.rs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cargo.toml" />
+    <Content Include="Cargo.lock">
+      <AutoImportModules>False</AutoImportModules>
+    </Content>
+    <Content Include="Cargo.toml">
+      <AutoImportModules>False</AutoImportModules>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\VisualRust\VisualRust.Rust.targets" />
 </Project>
