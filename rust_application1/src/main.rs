@@ -1,6 +1,5 @@
 extern crate rand;
 
-use std::{i8,i32,f32};
 use std::cmp::Ordering;
 use rand::Rng;
 use std::io;
