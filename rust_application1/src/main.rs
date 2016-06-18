@@ -7,18 +7,10 @@ use std::io;
 
 fn main()
 {
-    println!("------------------");
+    println!("--------------------------------------------");
+    println!("Hello Rust!");
     println!("HAIL TORVALDS!");
-    let num=10;
-    let  age: i32=60;
-    let hate: bool=age>num;
-
-    println!("Num is {}",num);
-    println!("Max i32 is {}", i32::MAX);
-    println!("Max i8 is {}", i8::MAX);
-    println!("Am i hate? {}", hate);
-    println!("sqrt(60)= {}", (age as f32) .sqrt());
-    println!("------------------");
+    println!("--------------------------------------------");
 
     println!("Guess the number!");
     let secret_number = rand::thread_rng().gen_range(1, 101);
