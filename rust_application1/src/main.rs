@@ -1,11 +1,14 @@
 extern crate rand;
 
-use std::cmp::Ordering;
 use rand::Rng;
+use std::cmp::Ordering;
+use std::io::Write;
 use std::io;
 
 fn main()
 {
+    let mut file = std::fs::File::create("foo.txt").expect("Problem with file");
+    
     println!("--------------------------------------------");
     println!("Hello Rust!");
     println!("HAIL TORVALDS!");
@@ -13,6 +16,7 @@ fn main()
 
     println!("Guess the number!");
     let secret_number = rand::thread_rng().gen_range(1, 101);
+    file.write(secret_number.to_string().as_bytes()).expect("Cannot write to file");
     let mut tries=0;
 
     loop
