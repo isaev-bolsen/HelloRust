@@ -16,7 +16,7 @@ fn main()
 
     println!("Guess the number!");
     let secret_number = rand::thread_rng().gen_range(1, 101);
-    file.write(secret_number.to_string().as_bytes()).expect("Cannot write to file");
+    file.write_fmt(format_args!("Secret number is: {}", secret_number)).expect("Cannot write to file");
     let mut tries=0;
 
     loop
@@ -51,4 +51,3 @@ fn read_int() -> u32
         };
     }
 }
-
