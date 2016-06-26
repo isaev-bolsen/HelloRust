@@ -7,7 +7,7 @@ use std::io;
 
 fn main()
 {
-    let mut file = std::fs::File::create("foo.txt").expect("Problem with file");
+    let mut file = std::fs::File::create("Log.txt").expect("Problem with file");
     
     println!("--------------------------------------------");
     println!("Hello Rust!");
